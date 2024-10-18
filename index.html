@@ -1,23 +1,21 @@
+ <!--
+     Author: Alicia Zhang
+     CS 132 Spring 2024
+     Date: October 16, 2024
+
+     This is the index.html page for my analysis on the demographics and
+     effects of enviromental justice concepts in Livermore, CA
+     
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
-<!--
-  CS 132
-  CP 2: Analysis on the Environmental Injustices of Livermore
-
-areas with vineyards & correlation with maps
-oldest house
-talked about nuclear waste facility w LLNL dispute
-
-housing devleopemts near ace train station, and portola
-and downtown ()
-nuclear waste/weapons development 
--->
 
 <head>
   <meta charset="UTF-8" />
   <title>Livermore</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="text-styles.css" />
 
   <!-- Provided helper files for DOM aliases and menu options -->
   <script src="utils.js"></script>
@@ -42,66 +40,65 @@ nuclear waste/weapons development
         </nav>
     </header>
     <main>
-        <div class="map" id="homepage">
-            <div id="widget"></div>
-        </div>
-        <section id="maps">
-   
-            <div class="map-container">
+        <div id="info">
+            <div id="maps" class="map-container">
+                <!-- Map images from https://imaginelivermore2045.org/wp-content/uploads/2022/03/10_EnviroJustice_CmtyHealth_Mar2022.pdf -->
+                <img class="overlayImg" id="limitedEnglish" src="spanish-speaking.png" alt="limited english map">
                 <img class="overlayImg" id="calEnviroScreen" src="greenmap.png" alt="enviroscreen">
                 <img class="overlayImg" id="lowIncome" src="low-income.png" alt="low income map">
-                <img class="overlayImg" id="limitedEnglish" src="spanish-speaking.png" alt="limited english map">
             </div>
-
-        </section>
-
-        
-        <aside>
-            
+            <div id="paragraph" class="content"> 
+                <p>
+                    The 11-20% grade has zero buffer from the street. the architecture 
+                    of the houses in this neighborhood are built from 2-3 set templates
+                    There is adequate streetlighting, also a fairly quiet street. Absolutely 
+                    no tree coverage on the sidewalks or street however. 
+                </p>
+                <p>
+                    The 1-10% has the most tree coverage on the sidewalks and streets
+                    from this neighborhood. this is also an extremely quiet street, 
+                    especially since there are no houses on the otherside. This area
+                    is interesting since a sycamore tree trail separates these
+                    single-family homes from the apartments right across, which are 
+                    a 31-40% environmentally-impacted area. 
+                    
+                There is significant overlap of the higher rated CalEnviroScreen
+                        with higher % of Low-income populations
+                </p>
+                <p> CalEnviroScreen is a screening tool used to help identify 
+                        communities disproportionately burdened by multiple sources
+                        of pollution and with population characteristics that make 
+                        them more sensitive to pollution.
+                        There is a slight correlation of limited-English speakers with
+                            higher % of Low-income populations.
+                
+                </p>
+            </div>
+        </div>
+        <aside>    
             <h1>Analysis</h1>
             <h2>Comparing Between Sections</h2>
             <div class="buttons">
-                <button onclick="switchMap('calEnviroScreen')">Toggle CalEnviroScreen</button>
-                <button onclick="switchMap('lowIncome')">Toggle Low-Income Map</button>
-                <button onclick="switchMap('limitedEnglish')">Toggle Limited-English Map</button>
+                <button id="calEnviroButton">Toggle CalEnviroScreen</button>
+                <button id="lowIncomeButton">Toggle Low-Income Map</button>
+                <button id="limitedEnglishButton">Toggle Limited-English Map</button>
             </div>
             <blockquote class="suburban-bubble-quote">
                 In one instance, a fellow member of a community discussion group
-                 on Facebook wrote that my hometown didn't need to hold a protest 
-                 against police brutality because she didn't believe it happened 
-                 there, which I noted was a reflection of her own privilege as 
-                 a White woman in suburbia. In another conversation, a woman 
-                 said that people should just vote instead of yelling in the 
-                 streets. In response, I offered some insight about voter 
-                 suppression and its impact on Black people and immigrants, 
-                 particularly in lower-income communities. Over the course of 
-                 about a week, I made it my mission to dispel beliefs I felt 
-                 were founded on ignorance. Despite these efforts, I really 
-                 don't think I managed to break through the suburban bubble of 
-                 oblivion.
+                on Facebook wrote that my hometown didn't need to hold a protest 
+                against police brutality because she didn't believe it happened 
+                there, which I noted was a reflection of her own privilege as 
+                a White woman in suburbia. In another conversation, a woman 
+                said that people should just vote instead of yelling in the 
+                streets. In response, I offered some insight about voter 
+                suppression and its impact on Black people and immigrants, 
+                particularly in lower-income communities. Over the course of 
+                about a week, I made it my mission to dispel beliefs I felt 
+                were founded on ignorance. Despite these efforts, I really 
+                don't think I managed to break through the suburban bubble of 
+                oblivion.
+                - Cierra Bailey
             </blockquote>
-            <p>
-                the 11-20% grade has zero buffer from the street. the architecture 
-                of the houses in this neighborhood are built from 2-3 set templates
-                There is adequate streetlighting, also a fairly quiet street. Absolutely 
-                no tree coverage on the sidewalks or street however. 
-            </p>
-            <p>
-                the 1-10% has the most tree coverage on the sidewalks and streets
-                from this neighborhood. this is also an extremely quiet street, 
-                especially since there are no houses on the otherside. This area
-                is interesting since a sycamore tree trail separates these
-                single-family homes from the apartments right across, which are 
-                a 31-40% environmentally-impacted area. 
-            </p>
-            <p> CalEnviroScreen is a screening tool used to help identify 
-                    communities disproportionately burdened by multiple sources
-                    of pollution and with population characteristics that make 
-                    them more sensitive to pollution. </p>
-            <p> There is significant overlap of the higher rated CalEnviroScreen
-                        with higher % of Low-income populations </p>
-            <p> There is a slight correlation of limited-English speakers with
-                     higher % of Low-income populations </p>
         </aside>
     </main>
 
