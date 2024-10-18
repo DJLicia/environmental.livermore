@@ -1,4 +1,12 @@
-/* Base styles */
+ /*
+    Author: Alicia
+    CS 132 Spring 2024
+    Date: October 12, 2024
+
+    This is the styles.css page for the landing page index.html of my 
+    Environmental justice analysis of Livermore. 
+*/
+
 body {
     font-family: 'Courier New', Courier, monospace;
     background-color: #f5f2e8; /* light paper-like background */
@@ -11,7 +19,8 @@ header {
     background-color: #003366; /* Dark blue header */
     padding: 10px;
     text-align: center;
-    color: white;
+    color:#eae3d7;
+    justify-content: space-between;
 }
 
 nav ul {
@@ -24,35 +33,65 @@ nav ul li {
     margin: 0 15px;
 }
 
-main {
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-    justify-content: space-between;
+nav > ul > li > a {
+    color: bisque;
+    list-style-type: none;
+    text-decoration: none;
 }
 
-section {
+main {
+    display: flex;
+    /* flex-direction: column; */
+    flex-grow: 2;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+#info {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#info div {
+    margin: 30px;
 }
 
 #maps {
+    min-width: 100px;
     flex-grow: 2;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+    height: 50vh;
 }
 
 #maps img {
-    width: 100%;
+    width: 90%;
     height: auto;
     border: 5px solid #ddd;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    opacity: 1;
 }
 
-aside {
-    width: 25%;
-    padding: 20px;
+main aside {
+    width: 60%;
+    padding: 10px;
     background-color: #eae3d7; /* Subtle parchment color */
-    border-left: 2px solid #333;
+    border-left: 2px solid #003366;
+    margin-top: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 h1, h2 {
@@ -60,12 +99,25 @@ h1, h2 {
     color: #333;
 }
 
-
 .map-container {
     position: relative;
-    width: 100%;
-    height: 500px;
+    width: 80%;
+    height: 100%;
     margin-top: 20px;
+}
+
+#paragraphs {
+    width: 80%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#paragraphs p {
+    margin-bottom: 15px;
+    line-height: 1.6;
 }
 
 .overlayImg {
@@ -73,13 +125,10 @@ h1, h2 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    cursor: pointer;
     display: block;
-}
-
-.hidden {
-    display: none;
+    opacity: 1;
 }
 
 .popup {
@@ -101,11 +150,57 @@ h1, h2 {
     max-height: 300px;
 }
 
+.hidden {
+    display: none;
+}
+
 .buttons {
+    display: flex;
     margin-top: 10px;
     display: flex;
     justify-content: center;
     gap: 10px;
+}
+
+.buttons button {
+    background-color:cornflowerblue; 
+    color: white; 
+    border: none; 
+    border-radius: 8px;
+    padding: 12px 20px; 
+    font-size: 16px; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.2s; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.buttons button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.buttons button:active {
+    background-color: #397d3d; /* Even darker green on active click */
+    transform: translateY(1px); /* Pressed effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slightly reduced shadow */
+}
+
+.buttons button:focus {
+    outline: 3px solid #80C5FF; /* Blue focus outline for accessibility */
+}
+
+blockquote {
+    font-style: italic;
+    color: #555;
+    border-left: 4px solid #4CAF50;
+    padding-left: 10px;
+}
+
+blockquote:hover {
+    background-color: darkgray;
+    color: #ddd;
 }
 
 /* Paragraph styling */
@@ -114,19 +209,4 @@ p {
     font-size: 16px;
     line-height: 1.5;
     margin-top: 10px;
-}
-
-/* Tooltip styling for hover */
-.tooltip {
-    position: absolute;
-    display: none;
-    background: white;
-    border: 1px solid #333;
-    padding: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-    z-index: 10;
-}
-
-.map:hover .tooltip {
-    display: block;
 }
