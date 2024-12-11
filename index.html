@@ -47,6 +47,66 @@
                 <img class="overlayImg" id="calEnviroScreen" src="greenmap.png" alt="enviroscreen">
                 <img class="overlayImg" id="lowIncome" src="low-income.png" alt="low income map">
             </div>
+            <section id="community-calendar">
+              <h2>Community Events & Meetings</h2>
+              
+              <div class="calendar-filters">
+                <button class="filter-btn active">All Events</button>
+                <button class="filter-btn">City Council</button>
+                <button class="filter-btn">Community Meetings</button>
+                <button class="filter-btn">Workshops</button>
+              </div>
+            
+              <div class="events-container">
+                <div class="event-card">
+                  <div class="event-date">
+                    <span class="month">DEC</span>
+                    <span class="day">15</span>
+                  </div>
+                  <div class="event-details">
+                    <h3>City Council Housing Policy Meeting</h3>
+                    <p class="event-time"><i>6:00 PM - 8:00 PM</i></p>
+                    <p class="event-location">Livermore City Hall - Council Chambers</p>
+                    <p class="event-description">Discussion of proposed affordable housing developments and environmental impact assessments.</p>
+                    <button class="rsvp-btn">RSVP</button>
+                  </div>
+                </div>
+            
+                <div class="event-card">
+                  <div class="event-date">
+                    <span class="month">DEC</span>
+                    <span class="day">18</span>
+                  </div>
+                  <div class="event-details">
+                    <h3>Community Tree Planting Workshop</h3>
+                    <p class="event-time"><i>9:00 AM - 12:00 PM</i></p>
+                    <p class="event-location">May Nissen Park</p>
+                    <p class="event-description">Join us for a community tree planting event to increase urban canopy coverage in underserved areas.</p>
+                    <button class="rsvp-btn">RSVP</button>
+                  </div>
+                </div>
+            
+                <div class="event-card">
+                  <div class="event-date">
+                    <span class="month">JAN</span>
+                    <span class="day">05</span>
+                  </div>
+                  <div class="event-details">
+                    <h3>Environmental Justice Town Hall</h3>
+                    <p class="event-time"><i>5:30 PM - 7:30 PM</i></p>
+                    <p class="event-location">Livermore Public Library - Community Room</p>
+                    <p class="event-description">Open forum to discuss environmental concerns and housing equity in our community.</p>
+                    <button class="rsvp-btn">RSVP</button>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="calendar-navigation">
+                <button class="nav-btn">Previous</button>
+                <span class="current-month">December 2024</span>
+                <button class="nav-btn">Next</button>
+              </div>
+            </section>
             <div id="paragraph" class="content"> 
                 <p>
                     The 11-20% grade has zero buffer from the street. the architecture 
@@ -99,6 +159,63 @@
                 oblivion.
                 - Cierra Bailey
             </blockquote>
+
+            <form id="communityFeedback" class="feedback-form">
+                <h2>Community Feedback</h2>
+                <p class="form-description">Share your thoughts and experiences about housing and environmental conditions in your neighborhood</p>
+                
+                <div class="form-group">
+                  <label for="neighborhood">Which neighborhood do you live in?</label>
+                  <select id="neighborhood" name="neighborhood" required>
+                    <option value="">Select your neighborhood</option>
+                    <option value="1-10">Downtown</option>
+                    <option value="11-20">ACE Train Station</option>
+                    <option value="31-40">Junction Ave</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              
+                <div class="form-group">
+                  <label for="duration">How long have you lived in this neighborhood?</label>
+                  <select id="duration" name="duration" required>
+                    <option value="">Select time period</option>
+                    <option value="less-1">Less than 1 year</option>
+                    <option value="1-5">1-5 years</option>
+                    <option value="5-10">5-10 years</option>
+                    <option value="10+">More than 10 years</option>
+                  </select>
+                </div>
+              
+                <div class="form-group">
+                  <label>What environmental concerns have you noticed? (Select all that apply)</label>
+                  <div class="checkbox-group">
+                    <label><input type="checkbox" name="concerns" value="air">Air quality</label>
+                    <label><input type="checkbox" name="concerns" value="noise">Noise pollution</label>
+                    <label><input type="checkbox" name="concerns" value="traffic">Traffic</label>
+                    <label><input type="checkbox" name="concerns" value="trees">Lack of trees/green space</label>
+                    <label><input type="checkbox" name="concerns" value="other">Other</label>
+                  </div>
+                </div>
+              
+                <div class="form-group">
+                  <label for="experience">Please share your housing experience and any environmental concerns:</label>
+                  <textarea id="experience" name="experience" rows="5" placeholder="Tell us about your experience living in this neighborhood..."></textarea>
+                </div>
+              
+                <div class="form-group">
+                  <label for="suggestions">What changes would you like to see in your neighborhood?</label>
+                  <textarea id="suggestions" name="suggestions" rows="5" placeholder="Share your ideas for improvement..."></textarea>
+                </div>
+              
+                <div class="form-group">
+                  <label for="email">Email (optional):</label>
+                  <input type="email" id="email" name="email" placeholder="Enter email to receive updates">
+                </div>
+              
+                <div class="form-group">
+                  <button type="submit" class="submit-btn">Submit Feedback</button>
+                </div>
+              </form>
         </aside>
     </main>
 
